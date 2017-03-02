@@ -1,2 +1,2 @@
-# ibachmansanders.github.io
-Website Showcase
+# CommuteTimeMap
+First stab at JavaScript mapping, with proportional symbols

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+		<meta charset=utf-8 />
+		<title>Urban Commutes</title>
+
+		<!--put your external stylesheet links here-->
+
+		<!--[if IE<9]>
+			<link rel="stylesheet" href="css/style.ie.css">
+		<![endif]-->
+		<link rel='shortcut icon' href='img/faviconPie.ico' type='image/x-icon' />
+		<link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+		<link rel="stylesheet" href="lib/leaflet/leaflet.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<!--put your initial page content here-->
+		<div id="wrapper">
+			<div class="leaflet-top leaflet-right">
+				<div class="leaflet-control">
+			    	<nav class='menu-ui'>
+					  <a href='#' class='active' data-filter='all' id="showAll">Show All Cities</a>
+					  <a href='#' data-filter='drive'>Most Drivers</a>
+					  <a href='#' data-filter='pubTrans'>Most Transit</a>
+					  <a href='#' data-filter='walk'>Most Walkers</a>
+					  <a href='#' data-filter='bike'>Most Bikers</a>
+					  <a href='#' data-filter='other'>Most Other</a>
+					  <a href='#' data-filter='home'>Most Home</a>
+					</nav>
+				</div>
+			</div>
+			<div class="leaflet-top leaflet-left" id="welcomeWrapper">
+	        	<div class="info leaflet-control" id="welcomePanel">
+		        	<div id="welcome">
+			        	<h2>How Does Your Commute Compare?</h2>
+			        	<p>Explore commuting data across American cities to see how we're getting to work, and how long it's taking us.<br><strong>Click anywhere to get started.</strong></p>
+		        	</div>
+	        	</div>
+        	</div>
+	        <div class="leaflet-bottom leaflet-left">
+	        	<div class="info leaflet-control" id="panel-wrapper">
+	        		<div id="temporalLegend">
+	        			<h2>2005 Commute Time</h2>
+	        		</div>
+	        		<div id="panelName"></div>
+		        	<div id="panel">
+			        	<p><strong>Click any city</strong> for more information</p>
+		        	</div>
+		        	<div id="pieCanvas" style="display: inline;"></div>
+		        	<div id="controls"></div>
+		        	<div id="citation">
+		        	<p>U.S. Census Bureau (2015). <em>Means of Transportation to Work by Selected Characteristics,<br>2005-2015 American Community Survey 1-year estimates</em> Retrieved from <br>https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_15_1YR_S0802.</p>
+		        	</div>
+	        	</div>
+        	</div>
+	        <div id="mapid"></div>
+    	</div>
+		<!--you can also use this space for internal scripts or stylesheets;
+		place these within <script> or <style> tags-->
+
+		<!--put your external script links here-->		
+		<script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>
+		<script type="text/javascript" src="lib/leaflet-canvasicon.js"></script>
+		<script type="text/javascript" src="lib/leaflet-piechart.js"></script>
+		<script type="text/javascript" src="lib/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
